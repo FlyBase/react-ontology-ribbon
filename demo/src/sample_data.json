@@ -1,0 +1,104 @@
+[
+  {
+    "id": "GO:0023052",
+    "name": "signaling",
+    "descendant_terms": [
+      {
+        "id": "GO:0007179",
+        "name": "transforming growth factor beta receptor signaling pathway"
+      },
+      {
+        "id": "GO:0030509",
+        "name": "BMP signaling pathway"
+      },
+      {
+        "id": "GO:0061353",
+        "name": "BMP signaling pathway involved in Malpighian tubule cell chemotaxis"
+      }
+    ]
+  },
+  {
+    "id": "GO:0019538",
+    "name": "protein metabolism",
+    "descendant_terms": []
+  },
+  {
+    "id": "GO:0050896",
+		"name": "response to stimulus",
+		"descendant_terms": [
+			{
+				"id": "GO:0016055",
+				"name": "Wnt signaling pathway"
+			}
+		]
+	},
+  {
+    "id":"GO:0002376",
+    "name": "immune system",
+    "descendant_terms": [
+      {
+        "id": "GO:0007516",
+        "name": "hemocyte development"
+      },
+      {
+        "id": "GO:0035168",
+        "name": "larval lymph gland hemocyte differentiation"
+      },
+      {
+        "id": "GO:0048542",
+        "name": "lymph gland development"
+      }
+    ]
+  },
+  {
+    "id":"GO:0007610",
+    "name": "behavior",
+    "descendant_terms": []
+  },
+  {
+    "id":"GO:0000003",
+    "name": "reproduction",
+    "descendant_terms": [
+      {
+        "id": "GO:0007281",
+        "name": "germ cell development"
+      },
+      {
+        "id": "GO:0007304",
+        "name": "chorion-containing eggshell formation"
+      },
+      {
+        "id": "GO:0007313",
+        "name": "maternal specification of dorsal/ventral axis, oocyte, soma encoded"
+      },
+      {
+        "id": "GO:0008354",
+        "name": "germ cell migration"
+      },
+      {
+        "id": "GO:0030707",
+        "name": "ovarian follicle cell development"
+      },
+      {
+        "id": "GO:0035263",
+        "name": "genital disc sexually dimorphic development"
+      },
+      {
+        "id": "GO:0042078",
+        "name": "germ-line stem cell division"
+      },
+      {
+        "id": "GO:0045476",
+        "name": "nurse cell apoptotic process"
+      },
+      {
+        "id": "GO:0046843",
+        "name": "dorsal appendage formation"
+      },
+      {
+        "id": "GO:0048477",
+        "name": "oogenesis"
+      }
+    ]
+  }
+]
