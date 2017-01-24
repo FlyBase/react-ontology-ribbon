@@ -90,6 +90,7 @@ const handleOnClick = (term, evt) => {
   console.log("Term name " + term.name);
   console.log("# Descendant terms " + term.descendant_terms.length);
 }
+```
 
 ## Data object structure.
 
