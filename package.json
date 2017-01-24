@@ -1,7 +1,7 @@
 {
-  "name": "react-go-ribbon",
+  "name": "react-ontology-ribbon",
   "version": "0.1.0",
-  "description": "A react component for generating heatmap type displays for gene ontology (GO) slims.",
+  "description": "A react component for generating heatmap type displays for ontology slims.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -33,7 +33,7 @@
   ],
   "homepage": "",
   "license": "MIT",
-  "repository": "https://github.com/FlyBase/react-go-ribbon",
+  "repository": "https://github.com/FlyBase/react-ontology-ribbon",
   "keywords": [
     "react-component",
     "Gene Ontology",

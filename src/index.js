@@ -32,8 +32,8 @@ Ribbon.propTypes = {
     })
   ),
   noResults: PropTypes.any,
-  title: PropTypes.string,
-  onBlockClick: PropTypes.func,
+  title: PropTypes.any,
+  onTermClick: PropTypes.func,
 };
 
 Ribbon.defaultProps = {
