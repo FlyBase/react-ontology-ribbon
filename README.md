@@ -4,7 +4,6 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-# react-ontology-ribbon
 A React component for generating a heatmap type display for Gene Ontology (GO) slims.
 
 ## Getting started
