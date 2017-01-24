@@ -4,7 +4,7 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-A React component for generating a heatmap type display for Gene Ontology (GO) slims.
+A React component for generating a heatmap type display for Ontology slims.
 
 ## Getting started
 
@@ -67,11 +67,10 @@ Browse to whatever URL is indicated on your screen.
 
 The Ribbon component takes the following properties.
 
-* noResults - 
 
 | Name | Description | Type |  Default |
 |:-----|:------------|------|:--------|
-| data | The GO slim terms | Array of objects (see below) |  | 
+| data | The slim terms (see below) | Array of objects |  | 
 | heatLevels | The number of gradients to use in the heatmap | number | 8 |
 | baseRGB | The RGB values that the gradient is based on. | Array of RGB numbers | [0,96,96] |
 | noResults | Content to display if no data is supplied | String or custom compoment|  | 
@@ -84,12 +83,20 @@ This callback is called when the block or text label for the block is clicked.
 It is passed the object that represents the slim term as the first argument
 and the event object as the second.
 
+```JSX
+
+const handleOnClick = (term, evt) => {
+  console.log("Term ID " + term.id);
+  console.log("Term name " + term.name);
+  console.log("# Descendant terms " + term.descendant_terms.length);
+}
+
 ## Data object structure.
 
 The data property takes an array of objects that describes the ontology slim that we are 
 generating a ribbon for.  Each object has 3 properties, an `id`, a `name`, and `descendant_terms`.
 The first two properties are strings while `descendant_terms` is an array of terms contained by
-this slim term.  The `descendant_terms` array objects must contain an `id` and `name` field as well.
+this slim term.  The objects in the `descendant_terms` array must contain an `id` and `name` field as well.
 
 ```JSON
 [
