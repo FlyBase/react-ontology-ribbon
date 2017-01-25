@@ -4,7 +4,15 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-A React component for generating a heatmap type display for Ontology slims.
+A React component for generating a heatmap type display for ontology slims.
+
+## Description
+
+This component generates a heatmap display (ribbon) for ontology term summaries (slims).
+It was designed for summarizing [Gene Ontology](http://geneontology.org/) 
+terms, but it can be used with any ontology.
+
+![Example GO Ribbon](go_ribbon.png)
 
 ## Getting started
 
@@ -86,12 +94,17 @@ It is passed the object that represents the slim term as the first argument
 and the event object as the second.
 
 ```JSX
-
 const handleOnClick = (term, evt) => {
   console.log("Term ID " + term.id);
   console.log("Term name " + term.name);
   console.log("# Descendant terms " + term.descendant_terms.length);
 }
+```
+
+Then you can add it to your ribbon.
+
+```JSX
+<Ribbon data={mydata} onTermClick={handleOnClick} />
 ```
 
 ## Data object structure.
@@ -101,6 +114,7 @@ generating a ribbon for.  Each object has 3 properties, an `id`, a `name`, and `
 The first two properties are strings while `descendant_terms` is an array of terms contained by
 this slim term.  The objects in the `descendant_terms` array must contain an `id` and `name` field as well.
 
+e.g.
 ```JSON
 [
   {
