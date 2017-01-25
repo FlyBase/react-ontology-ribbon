@@ -15,14 +15,14 @@ In your React project, add `react-ontology-ribbon` via npm.
 Then you can use it in a React component such as.
 
 ```JSX
-import React from 'react';
+import React, { Component } from 'react';
 import {render} from 'react-dom';
 
 import Ribbon from 'react-ontology-ribbon';
 
 class MyClass extends Component {
   constructor() {
-    super(props);
+    super();
     this.state = {
       data: [
         { id: 'GO:12345',
@@ -62,6 +62,8 @@ npm install
 npm run start
 ```
 Browse to whatever URL is indicated on your screen.
+
+[Demo source](demo/src/index.js)
 
 ## Properties
 
