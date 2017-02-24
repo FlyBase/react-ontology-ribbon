@@ -1,6 +1,6 @@
 {
   "name": "react-ontology-ribbon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A react component for generating heatmap type displays for ontology slims.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -11,7 +11,7 @@
     "umd"
   ],
   "scripts": {
-    "build": "nwb build-react-component",
+    "build": "nwb build-react-component --copy-files",
     "clean": "nwb clean-module && npm clean-demo",
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
