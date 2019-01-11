@@ -16,7 +16,7 @@ terms, but it can be used with any ontology.
 
 ## Getting started
 
-In your React project, add `react-ontology-ribbon` via npm.
+In your React project, add `@flybase/react-ontology-ribbon` via npm.
 
 `npm install @flybase/react-ontology-ribbon`
 
@@ -26,7 +26,7 @@ Then you can use it in a React component such as.
 import React, { Component } from 'react';
 import {render} from 'react-dom';
 
-import Ribbon from 'react-ontology-ribbon';
+import Ribbon from '@flybase/react-ontology-ribbon';
 
 class MyClass extends Component {
   constructor() {
