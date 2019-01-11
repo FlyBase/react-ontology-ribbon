@@ -18,7 +18,7 @@ terms, but it can be used with any ontology.
 
 In your React project, add `react-ontology-ribbon` via npm.
 
-`npm install react-ontology-ribbon`
+`npm install @flybase/react-ontology-ribbon`
 
 Then you can use it in a React component such as.
 
@@ -69,6 +69,7 @@ cd react-ontology-ribbon
 npm install
 npm run start
 ```
+
 Browse to whatever URL is indicated on your screen.
 
 [Demo source](demo/src/index.js)
