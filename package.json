@@ -1,6 +1,6 @@
 {
   "name": "react-ontology-ribbon",
-  "version": "0.2.1",
+  "version": "0.2.0",
   "description": "A react component for generating heatmap type displays for ontology slims.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -19,8 +19,7 @@
     "test:watch": "nwb test-react --server",
     "format": "prettier --write 'src/**/*.js'"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "16.x"
   },
@@ -45,12 +44,12 @@
     "Gene Ontology",
     "slim"
   ],
-  "prettier": { 
-    "semi": false, 
-    "trailingComma": "es5", 
-    "singleQuote": true, 
-    "jsxBracketSameLine": true, 
-    "tabWidth": 2, 
-    "printWidth": 80 
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "jsxBracketSameLine": true,
+    "tabWidth": 2,
+    "printWidth": 80
   }
 }
