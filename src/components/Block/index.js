@@ -4,22 +4,21 @@ import PropTypes from 'prop-types'
 function heatColor(heat, rgb, levels) {
   // return 'white' if heat==0 (which should never happen)
   if (heat == 0) return '#fff'
-  const c = [0, 0, 0] // [r,g,b]
-  for (let i = 0; i < 3; i++) {
+
+  const adjustedColor = rgb.map(color => {
     // logarithmic heatmap (with cutoff)
     if (heat < levels) {
       // instead of just (256-rgb[i])/(Math.pow(2,heat)), which divides space from
       // 'white' (255) down to target color level in halves, this starts at 3/4
-      const heatCoef = (3 * (256 - rgb[i])) / Math.pow(2, heat + 1)
-      c[i] = Math.round(rgb[i] + heatCoef)
-    } else {
-      c[i] = rgb[i]
-    }
-  }
-  return `rgb(${c.join(',')})`
+      const heatCoef = (3 * (256 - color)) / Math.pow(2, heat + 1)
+      return Math.round(color + heatCoef)
+    } 
+    return color
+  })
+  return `rgb(${adjustedColor.join(',')})`
 }
 
-function Block({ data, baseRGB, heatLevels, onTermClick }) {
+function Block({ data, baseRGB = [0,0,0], heatLevels, onTermClick }) {
   function handleOnClick(evt) {
     if (onTermClick) {
       onTermClick(data, evt)
