@@ -1,19 +1,15 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import './index.css';
+import './index.css'
 
-import Strip from './components/Strip';
+import Strip from './components/Strip'
 
-function Ribbon({ noResults, ...props}) {
+function Ribbon({ noResults, ...props }) {
   if (props.data && props.data.length != 0) {
-    return <Strip {...props} />;
-  }
-  else {
-    return (
-      <div>
-        {noResults}
-      </div>
-    );
+    return <Strip {...props} />
+  } else {
+    return <div>{noResults}</div>
   }
 }
 
@@ -22,27 +18,28 @@ Ribbon.propTypes = {
   baseRGB: PropTypes.arrayOf(PropTypes.number),
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      "id": PropTypes.string.isRequired,
-      "name": PropTypes.string.isRequired,
-      "descendant_terms": PropTypes.arrayOf(
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      descendant_terms: PropTypes.arrayOf(
         PropTypes.shape({
-        "id": PropTypes.string.isRequired,
-        "name": PropTypes.string.isRequired,
-      })),
+          id: PropTypes.string.isRequired,
+          name: PropTypes.string.isRequired,
+        })
+      ),
     })
   ),
   noResults: PropTypes.any,
   title: PropTypes.any,
   onTermClick: PropTypes.func,
-};
+}
 
 Ribbon.defaultProps = {
   heatLevels: 8,
-  baseRGB: [0,96,96],
+  baseRGB: [0, 96, 96],
   data: [],
   noResults: 'No ribbon data found',
   title: '',
   onTermClick: null,
-};
+}
 
-export default Ribbon;
+export default Ribbon
