@@ -1,37 +1,35 @@
-import React, { PropTypes } from 'react'
-import Block from '../Block';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Block from '../Block'
 
-function Strip({data, title, ...props}) {
-
+function Strip({ data, title, ...props }) {
   // Generate a strip of blocks.
-  const StripOfBlocks = data.map((goSlimItem,i) => {
-    return <Block data={goSlimItem} key={goSlimItem.id + '_' + i} {...props} />;
-  });
+  const StripOfBlocks = data.map((goSlimItem, i) => {
+    return <Block data={goSlimItem} key={goSlimItem.id + '_' + i} {...props} />
+  })
 
-  return(
+  return (
     <div className="ribbonStrip">
-      <div className="blockBacker">
-        {StripOfBlocks}
-      </div>
+      <div className="blockBacker">{StripOfBlocks}</div>
       <div className="stripTitle">{title}</div>
     </div>
-  );
+  )
 }
-
 
 Strip.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
-    "id": PropTypes.string.isRequired,
-    "name": PropTypes.string.isRequired,
-    "descendant_terms": PropTypes.arrayOf(
-      PropTypes.shape({
-      "id": PropTypes.string.isRequired,
-      "name": PropTypes.string.isRequired,
-    })),
-    "url": PropTypes.string,
-  })
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      descendant_terms: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          name: PropTypes.string.isRequired,
+        })
+      ),
+      url: PropTypes.string,
+    })
   ).isRequired,
-};
+}
 
-export default Strip;
+export default Strip

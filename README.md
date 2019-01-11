@@ -77,13 +77,12 @@ Browse to whatever URL is indicated on your screen.
 
 The Ribbon component takes the following properties.
 
-
 | Name | Description | Type |  Default |
 |:-----|:------------|------|:--------|
-| data | The slim terms (see below) | Array of objects |  | 
+| data | The slim terms (see below) | Array of objects |  |
 | heatLevels | The number of gradients to use in the heatmap | number | 8 |
 | baseRGB | The RGB values that the gradient is based on. | Array of RGB numbers | [0,96,96] |
-| noResults | Content to display if no data is supplied | String or custom compoment|  | 
+| noResults | Content to display if no data is supplied | String or custom component|  |
 | title | Label to appear underneath the ribbon | String or custom component | |
 | onTermClick | Callback called when the term is clicked | Function | |
 
@@ -115,6 +114,7 @@ The first two properties are strings while `descendant_terms` is an array of ter
 this slim term.  The objects in the `descendant_terms` array must contain an `id` and `name` field as well.
 
 e.g.
+
 ```JSON
 [
   {
@@ -142,14 +142,14 @@ e.g.
   },
   {
     "id": "GO:0050896",
-		"name": "response to stimulus",
-		"descendant_terms": [
-			{
-				"id": "GO:0016055",
-				"name": "Wnt signaling pathway"
-			}
-		]
-	}
+    "name": "response to stimulus",
+    "descendant_terms": [
+      {
+       "id": "GO:0016055",
+       "name": "Wnt signaling pathway"
+      }
+    ]
+  }
 ]
 ```
 
