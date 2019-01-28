@@ -86,6 +86,8 @@ The Ribbon component takes the following properties.
 | noResults | Content to display if no data is supplied | String or custom component|  |
 | title | Label to appear underneath the ribbon | String or custom component | |
 | onTermClick | Callback called when the term is clicked | Function | |
+| calcHeatColor| A function to override the default heat color calculation. | Function | |
+| itemTitle | A function to generate a custom title for each ribbon item. | Function | Term name: Number of terms|
 
 ## onTermClick callback
 
@@ -105,6 +107,46 @@ Then you can add it to your ribbon.
 
 ```JSX
 <Ribbon data={mydata} onTermClick={handleOnClick} />
+```
+
+## calcHeatColor
+
+The property calcHeatColor can be used to pass in a custom function that
+will be used to calculate the color for the ribbon cell.  The function is passed an object
+with 4 key variables: numTerms, baseRGB, heatLevels, itemData.
+
+| Name | Description | Type |
+|:-----|:------------|------|
+| numTerms | The number of descendant terms for this item. | number |
+| baseRGB | The baseRGB value currently set. | Array of RGB numbers |
+| heatLevels | The heatLevels currently set. | number |
+| itemData | The data for the current item being drawn | Object |
+
+```JSX
+const customColorCalculation = ({numTerms, baseRGB, heatLevels, itemData }) => {
+  if (itemData.name === 'reproduction') {
+    return [120,120,120]
+  }
+  else if (numTerms > 5) {
+    return [0,0,0]
+  }
+  return [255,255,255]
+}
+```
+
+## itemTitle
+
+In order to disable the item title attribute, pass a function that returns an empty string or null.
+
+```JSX
+  <Ribbon
+    title="my title 3"
+    data={SampleData}
+    heatLevel={20}
+    baseRGB={[153,0,0]}
+    onTermClick={this.handleOnClick}
+    itemTitle={() => null}
+  />
 ```
 
 ## Data object structure.

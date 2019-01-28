@@ -46,6 +46,24 @@ class Demo extends Component {
             baseRGB={[153,0,0]}
             onTermClick={this.handleOnClick} 
           />
+          <Ribbon
+            title="my title 3"
+            data={SampleData}
+            heatLevel={20}
+            baseRGB={[153,0,0]}
+            onTermClick={this.handleOnClick} 
+            calcHeatColor={(num_terms, rgb, heat) => {
+              return [0,0,0]
+            }}
+          />
+          <Ribbon
+            title="my title 3"
+            data={SampleData}
+            heatLevel={20}
+            baseRGB={[153,0,0]}
+            onTermClick={this.handleOnClick} 
+            itemTitle={() => null}
+          />
         </div>
         <div style={{clear: "both"}}>
           {term && 'You clicked on ' + term.name}
@@ -53,7 +71,7 @@ class Demo extends Component {
 
         <div style={{paddingTop: "50px", clear: "both"}}>
           <Ribbon title="empty w/ string" data={null} noResults="No terms found" />
-          <Ribbon title="empty w/ component" data={null} noResults={<div>Custom element</div>} />
+          <Ribbon title="empty w/ component" data={null} noResults={<div>No terms w/ custom element</div>} />
         </div>
       </div>
     );

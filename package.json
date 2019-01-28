@@ -1,6 +1,6 @@
 {
   "name": "@flybase/react-ontology-ribbon",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A react component for generating heatmap type displays for ontology slims.",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -36,7 +36,7 @@
       "name": "Josh Goodman"
     }
   ],
-  "homepage": ".",
+  "homepage": "",
   "license": "MIT",
   "repository": "https://github.com/FlyBase/react-ontology-ribbon",
   "keywords": [
