@@ -30,7 +30,9 @@ Ribbon.propTypes = {
   ),
   noResults: PropTypes.any,
   title: PropTypes.any,
+  itemTitle: PropTypes.any,
   onTermClick: PropTypes.func,
+  calcHeatColor: PropTypes.func,
 }
 
 Ribbon.defaultProps = {
@@ -39,7 +41,6 @@ Ribbon.defaultProps = {
   data: [],
   noResults: 'No ribbon data found',
   title: '',
-  onTermClick: null,
 }
 
 export default Ribbon
