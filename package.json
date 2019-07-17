@@ -1,6 +1,6 @@
 {
   "name": "@flybase/react-ontology-ribbon",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "A react component for generating heatmap type displays for ontology slims.",
   "main": "lib/index.js",
   "module": "es/index.js",
