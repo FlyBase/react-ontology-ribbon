@@ -41,7 +41,7 @@ function Block({ data, baseRGB = [0,0,0], heatLevels, onTermClick, calcHeatColor
   const s = tileStrength == 1 ? '' : 's'
   const blockTitleClass =
     tileStrength > 0 ? 'ribbonBlockTitleTerm bold' : 'ribbonBlockTitleTerm'
-  const color = tileStrength ? RBGToCssColor(calcHeatColor({ numTerms:tileStrength, baseRGB: baseRGB, heatLevels: heatLevels, itemData: data})) : ''
+  const color = RBGToCssColor(calcHeatColor({ numTerms:tileStrength, baseRGB: baseRGB, heatLevels: heatLevels, itemData: data})) 
 
   const defaultItemTitle = `${blockTitle}:\n${tileStrength} term${s}`
 
