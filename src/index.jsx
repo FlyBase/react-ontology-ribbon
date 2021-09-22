@@ -1,13 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './index.css'
-
 import Strip from './components/Strip'
 
-function Ribbon({ noResults, ...props }) {
-  if (props.data && props.data.length != 0) {
-    return <Strip {...props} />
+function Ribbon({ noResults, data = [], ...rest }) {
+  if (data && data.length > 0) {
+    return <Strip data={data} {...rest} />
   } else {
     return <div>{noResults}</div>
   }
@@ -40,7 +38,6 @@ Ribbon.defaultProps = {
   baseRGB: [0, 96, 96],
   data: [],
   noResults: 'No ribbon data found',
-  title: '',
 }
 
 export default Ribbon

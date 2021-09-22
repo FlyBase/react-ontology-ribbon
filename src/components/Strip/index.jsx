@@ -2,16 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Block from '../Block'
 
-function Strip({ data, title, ...props }) {
+import classes from './index.module.css'
+
+const Strip = ({ data, title, ...props }) => {
   // Generate a strip of blocks.
   const StripOfBlocks = data.map((goSlimItem, i) => {
     return <Block data={goSlimItem} key={goSlimItem.id + '_' + i} {...props} />
   })
 
   return (
-    <div className="ribbonStrip">
-      <div className="blockBacker">{StripOfBlocks}</div>
-      <div className="stripTitle">{title}</div>
+    <div className={classes.ribbonStrip}>
+      <div>{StripOfBlocks}</div>
+      {title && <div className={classes.stripTitle}>{title}</div>}
     </div>
   )
 }
