@@ -5,21 +5,15 @@
   "main": "./dist/react-ontology-ribbon.umd.js",
   "module": "./dist/react-ontology-ribbon.es.js",
   "files": [
-    "dist"
+    "dist/*.css",
+    "dist/*.js"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/react-ontology-ribbon.es.js",
-      "require": "./dist/react-ontology-ribbon.umd.js"
-    }
-  },
   "scripts": {
     "prebuild": "yarn run format",
     "build": "vite build",
     "prestart": "yarn run format",
     "start": "vite",
     "dev": "vite",
-    "serve": "vite preview",
     "format": "prettier --write 'src/**/*.jsx'"
   },
   "dependencies": {},

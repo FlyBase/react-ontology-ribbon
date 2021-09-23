@@ -10,7 +10,6 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/index.jsx'),
       name: 'react-ontology-ribbon',
       fileName: (format) => `react-ontology-ribbon.${format}.js`,
-      formats: ['es','cjs']
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
