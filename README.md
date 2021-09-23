@@ -16,23 +16,23 @@ terms, but it can be used with any ontology.
 
 ## Getting started
 
-In your React project, add `@flybase/react-ontology-ribbon` via npm.
+In your React project, add `@flybase/react-ontology-ribbon` via npm/yarn.
 
 `npm install @flybase/react-ontology-ribbon`
+
+`yarn add @flybase/react-ontology-ribbon`
 
 Then you can use it in a React component such as.
 
 ```JSX
-import React, { Component } from 'react';
+import React from 'react';
 import {render} from 'react-dom';
 
 import Ribbon from '@flybase/react-ontology-ribbon';
+import '@flybase/react-ontology-ribbon/style.css';
 
-class MyClass extends Component {
-  constructor() {
-    super();
-    this.state = {
-      data: [
+const MyRibbon = () => {
+    const goData = [
         { id: 'GO:12345',
         name: 'a_go_slim_term_name',
         descendant_terms: [
@@ -41,21 +41,16 @@ class MyClass extends Component {
           { id: 'GO:33335', name:'a_descendant_term_3'},
         ]
         }
-      ] 
-    };
-
-  }
-
-  render() {
+    ]; 
     return (
       <div>
-        <Ribbon data={this.state.data} />
+        <Ribbon data={goData} />
       </div>
     );
   }
 }
 
-render(<MyClass />, document.querySelector('#root'));
+render(<MyRibbon />, document.querySelector('#root'));
 
 ```
 
@@ -66,13 +61,11 @@ Steps to running the demo locally
 ```bash
 git clone https://github.com/FlyBase/react-ontology-ribbon.git
 cd react-ontology-ribbon
-npm install
-npm run start
+yarn install
+yarn run start
 ```
 
 Browse to whatever URL is indicated on your screen.
-
-[Demo source](demo/src/index.js)
 
 ## Properties
 
@@ -200,7 +193,7 @@ e.g.
 [build]: https://travis-ci.org/FlyBase/react-ontology-ribbon
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/react-ontology-ribbon
+[npm]: https://www.npmjs.org/package/@flybase/react-ontology-ribbon
 
 [coveralls-badge]: https://img.shields.io/coveralls/FlyBase/react-ontology-ribbon/master.png?style=flat-square
 [coveralls]: https://coveralls.io/github/FlyBase/react-ontology-ribbon
